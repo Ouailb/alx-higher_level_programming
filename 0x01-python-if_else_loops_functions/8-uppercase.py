@@ -1,12 +1,9 @@
 #!/usr/bin/python3
-def uppercase(s):
-    num = ord('a') - ord('A')  # Calculate the difference between lowercase and uppercase ASCII values
-    result = ''
-    for char in s:
-        if 'a' <= char <= 'z':
-            result += "{:c}".format(ord(char) - num)
+def uppercase(x):
+    for i in range(len(x)):
+        if ord(x[i]) >= 97 and ord(x[i]) <= 122:
+            num = 32
         else:
-            result += char
-    print(result)
+            num = 0
+        print("{:c}".format(ord(x[i]) - num), end='')
     print()
-
