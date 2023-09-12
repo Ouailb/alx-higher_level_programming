@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-globals()['__builtins__']['print']("#pythoniscool")
+__import__('builtins').print("#pythoniscool")
