@@ -6,4 +6,3 @@ def best_score(a_dictionary):
         return best_key
     else:
         return None
-    
