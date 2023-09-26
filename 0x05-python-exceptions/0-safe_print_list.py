@@ -10,7 +10,7 @@ def safe_print_list(my_list=[], x=0):
     except IndexError:
         print()
         return count
-'''def safe_print_list(my_list=[], x=0):
+    '''def safe_print_list(my_list=[], x=0):
     count = 0
     try:
         while count < x:
@@ -21,4 +21,3 @@ def safe_print_list(my_list=[], x=0):
     finally:
         print()
     return count '''
-    
