@@ -5,6 +5,6 @@
 
 class Rectangle:
 
-    """ class rectangle"""
+    """ empty class Rectangle"""
 
     pass
