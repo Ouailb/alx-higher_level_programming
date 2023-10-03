@@ -42,7 +42,7 @@ class Rectangle:
         return self.width * self.height
 
     def perimeter(self):
-        """ returns rectangle perimiter"""
+        """ returns rectangle perimeter"""
         if self.__width == 0 or self.__height == 0:
             return 0
         else:
@@ -55,32 +55,6 @@ class Rectangle:
         return ("\n".join(["".join(["#" for i in range(self.__width)])
                 for j in range(self.__height)]))
 
-
     def __repr__(self):
         """ return a string representation of the rectangle """
         return "Rectangle({}, {})".format(self.__width, self.__height)
-
-
-my_rectangle = Rectangle(2, 4)
-print(str(my_rectangle))
-print("--")
-print(my_rectangle)
-print("--")
-print(repr(my_rectangle))
-print("--")
-print(hex(id(my_rectangle)))
-print("--")
-
-# create new instance based on representation
-new_rectangle = eval(repr(my_rectangle))
-print(str(new_rectangle))
-print("--")
-print(new_rectangle)
-print("--")
-print(repr(new_rectangle))
-print("--")
-print(hex(id(new_rectangle)))
-print("--")
-
-print(new_rectangle is my_rectangle)
-print(type(new_rectangle) is type(my_rectangle))
