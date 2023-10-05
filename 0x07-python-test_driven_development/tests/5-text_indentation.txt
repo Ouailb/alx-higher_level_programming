@@ -1,8 +1,4 @@
-The ``5-text_indentation`` module
-============================
 
-Using ``text_indentation``
----------------------
 
 Importing function from the module:
 

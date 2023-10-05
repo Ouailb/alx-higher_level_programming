@@ -1,8 +1,4 @@
-The ``100-matrix_mul`` module
-============================
 
-Using ``matrix_mul``
----------------------
 
 Importing function from the module:
 

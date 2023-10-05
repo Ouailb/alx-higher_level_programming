@@ -1,8 +1,4 @@
-The ``3-say_my_name`` module
-============================
 
-Using ``say_my_name``
----------------------
 
 Importing function from the module:
 
@@ -16,7 +12,7 @@ Passing first_name and last_name correctly
 Passing first_name and last_name correctly 2
 
     >>> say_my_name("Luis")
-    My name is Luis 
+    My name is Luis
 
 Passing None as the last_name
 

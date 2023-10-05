@@ -1,8 +1,4 @@
-The ``101-lazy_matrix_mul`` module
-============================
 
-Using ``lazy_matrix_mul``
----------------------
 
 Importing function from the module:
 

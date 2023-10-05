@@ -1,8 +1,4 @@
-The ``2-matrix_divided`` module
-============================
 
-Using ``matrix_divided``
----------------------
 
 Importing function from the module:
 
