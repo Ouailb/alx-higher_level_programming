@@ -52,12 +52,3 @@ def matrix_divided(matrix, div):
 
     m = list(map(lambda x: list(map(lambda y: round(y / div, 2), x)), matrix))
     return (m)
-
-matrix_divided = __import__('2-matrix_divided').matrix_divided
-
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6]
-]
-print(matrix_divided(matrix, 3))
-print(matrix)
