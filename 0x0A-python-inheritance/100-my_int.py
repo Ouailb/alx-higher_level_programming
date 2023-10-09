@@ -17,8 +17,3 @@ class MyInt(int):
         Override the != operator
         """
         return super().__eq__(other)
-
-my_i = MyInt(3)
-print(my_i)
-print(my_i == 3)
-print(my_i != 3)
