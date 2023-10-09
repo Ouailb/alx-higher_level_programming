@@ -15,4 +15,4 @@ class Square(Rectangle):
 
     def __str__(self):
         """ str function to print with/height """
-        return "[Square] {}/{}".format(self._Rectangle__width, self._Rectangle__height)
+        return '[Square] ' + str(self.__size) + '/' + str(self.__size)
