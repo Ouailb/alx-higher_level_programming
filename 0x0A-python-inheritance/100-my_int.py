@@ -1,11 +1,10 @@
 #!/usr/bin/python3
+""" A class that inherits from int """
+
+
 class MyInt(int):
-    """
-    A class that inherits from int
+    """ It overrides the == and != operators """
 
-    It overrides the == and != operators
-
-    """
     def __eq__(self, other):
         """ Override the == operator """
         return int(str(self)) != other
