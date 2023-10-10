@@ -14,11 +14,7 @@ class Student:
     def to_json(self, attrs=None):
         """ Method that returns """
         if attrs is None:
-            return {
-                'first_name': self.first_name,
-                'last_name': self.last_name,
-                'age': self.age
-            }
+            return self.__dict__.copy()
         else:
             result = {}
             for attr in attrs:
