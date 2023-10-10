@@ -14,14 +14,17 @@ class Student:
     def to_json(self, attrs=None):
         """ Method that returns """
         if attrs is None:
-            return self.__dict__.copy()
+            return {
+                'first_name': self.first_name,
+                'last_name': self.last_name,
+                'age': self.age
+            }
         else:
             result = {}
             for attr in attrs:
                 if hasattr(self, attr):
                     result[attr] = getattr(self, attr)
             return result
-
 
     def reload_from_json(self, json):
         """replaces all attributes of the Student"""
