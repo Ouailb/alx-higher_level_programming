@@ -101,7 +101,8 @@ class Rectangle(Base):
             self.id, self.__x, self.__y, self.__width, self.__height)
 
     def update(self, *args, **kwargs):
-        """ Update attributes with a combination of positional and keyword arguments """
+        """ Update attributes with a combination of
+        positional and keyword arguments """
         if args:
             attrs = ["id", "width", "height", "x", "y"]
             for i, value in enumerate(args):
