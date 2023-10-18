@@ -99,3 +99,14 @@ class Rectangle(Base):
         """ String representation of the Rectangle instance """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.__x, self.__y, self.__width, self.__height)
+
+    def update(self, *args, **kwargs):
+        """ Update attributes with a combination of positional and keyword arguments """
+        if args:
+            attrs = ["id", "width", "height", "x", "y"]
+            for i, value in enumerate(args):
+                if i < len(attrs):
+                    setattr(self, attrs[i], value)
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
