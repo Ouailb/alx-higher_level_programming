@@ -64,3 +64,37 @@ class Base:
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []
+
+# advance task 20
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Serialize instances to CSV and save to a file."""
+        filename = cls.__name__ + ".csv"
+
+        with open(filename, 'w', newline='') as file:
+            writer = csv.writer(file)
+            for obj in list_objs:
+                data = obj.to_csv()  # Define to_csv method in child classes
+                writer.writerow(data)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Deserialize instances from a CSV file and return
+                                    a list of instances."""
+        filename = cls.__name__ + ".csv"
+        instance_list = []
+
+        try:
+            with open(filename, 'r') as file:
+                reader = csv.reader(file)
+                for row in reader:
+                    data = [int(value) if i == 0 else int(value) for i,
+                            value in enumerate(row)]
+                    # Use create method to instantiate objects
+                    instance = cls.create(*data)
+                    instance_list.append(instance)
+        except FileNotFoundError:
+            pass
+
+        return instance_list
