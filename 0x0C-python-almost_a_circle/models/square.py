@@ -48,4 +48,3 @@ class Square(Rectangle):
         """
         self.width = value
         self.height = value
-
