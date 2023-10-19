@@ -115,13 +115,12 @@ class Rectangle(Base):
     #             self.y = args[4]
 
     def update(self, *args, **kwargs):
-        # Check if args is not empty and use it
+        """ Update attributes  """
         if args:
             attrs = ["id", "width", "height", "x", "y"]
-            for i, arg in enumerate(args):
+            for i, value in enumerate(args):
                 if i < len(attrs):
-                    setattr(self, attrs[i], arg)
+                    setattr(self, attrs[i], value)
         else:
-            # Use kwargs to update attributes
             for key, value in kwargs.items():
                 setattr(self, key, value)
