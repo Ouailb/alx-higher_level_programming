@@ -28,5 +28,23 @@ class Square(Rectangle):
             for key, value in kwargs.items():
                 setattr(self, key, value)
 
-    # def to_dictionary(self):
-    #    return {'id': self.id, 'size': self.width, 'x': self.x, 'y': self.y}
+    @property
+    def size(self):
+        """
+        Getter method for the size of the Square.
+
+        Returns:
+            int: The size of the Square.
+        """
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """
+        Setter method for the size of the Square.
+
+        Args:
+            value (int): The size value to be assigned.
+        """
+        self.width = value
+        self.height = value
