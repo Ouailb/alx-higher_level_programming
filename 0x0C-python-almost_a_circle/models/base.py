@@ -5,6 +5,7 @@
 
 import json
 import csv
+import turtle
 
 
 class Base:
@@ -102,3 +103,33 @@ class Base:
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []
+# advance task 21
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """Draw Rectangles and Squares using Turtle graphics."""
+        screen = turtle.Screen()
+        screen.bgcolor("white")
+
+        t = turtle.Turtle()
+        t.speed(1)
+
+        for rect in list_rectangles:
+            t.penup()
+            t.setpos(rect.x, rect.y)
+            t.pendown()
+            for _ in range(2):
+                t.forward(rect.width)
+                t.left(90)
+                t.forward(rect.height)
+                t.left(90)
+
+        for square in list_squares:
+            t.penup()
+            t.setpos(square.x, square.y)
+            t.pendown()
+            for _ in range(4):
+                t.forward(square.size)
+                t.left(90)
+
+        turtle.done()
