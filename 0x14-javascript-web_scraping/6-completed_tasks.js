@@ -1,4 +1,4 @@
-#!/usr/bin/node
+#!/usr/bin/env node
 
 const request = require('request');
 const url = process.argv[2];
@@ -6,7 +6,8 @@ const url = process.argv[2];
 request(url, function (err, response, body) {
   if (err) {
     console.log(err);
-  } else if (response.statusCode === 200) {
+  }
+  else if (response.statusCode === 200) {
     const completed = {};
     const tasks = JSON.parse(body);
     for (const i in tasks) {
@@ -14,13 +15,16 @@ request(url, function (err, response, body) {
       if (task.completed === true) {
         if (completed[task.userId] === undefined) {
           completed[task.userId] = 1;
-        } else {
+        }
+        else {
           completed[task.userId]++;
         }
       }
     }
     console.log(completed);
-  } else {
+  }
+  else
+  {
     console.log('An error occured. Status code: ' + response.statusCode);
   }
 });
